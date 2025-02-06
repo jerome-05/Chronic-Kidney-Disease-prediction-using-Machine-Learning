@@ -1,26 +1,66 @@
-## CHRONIC KIDNEY DISEASE PREDICTION
-A COMPARITIVE STUDY ON VARIOUS MACHINE LEARNING MODELS AND IMPUTATION TECHNIQUES
-INTRODUCTION
-Chronic Kidney Disease (CKD) is a progressive condition characterized by the gradual loss of kidney function. It is also associated with increased risk of cardiovascular disease and end – stage kidney disease. This project aims to diagnose the presence of CKD using various machine learning models such as Logistic Regression, Decision Tree, Random Forest and Linear Support Vector Machine. The project involves pre-processing the data, imputing missing values with techniques like KNN Imputation, Iterative Imputation and Mice Forest Imputation, encoding categorical variable and feature selection.
+Here's an updated **README summary** with the results table included:  
 
-DATASET
-The dataset used for this project is the Chronic Kidney Disease Dataset available from the UCI Machine Learning Repository. It contains 400 instances with 24 features, including blood pressure, blood glucose levels, and other indicators relevant to CKD diagnosis.
+---
 
-Source: https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease
+# 🏥 Chronic Kidney Disease Prediction  
+### **A Comparative Study on Machine Learning Models & Imputation Techniques**  
 
-IMPUTATION TECHNIQUES
-1. KNN Imputation: KNN imputation involves finding the "k" nearest neighbours to a data point with missing values. The missing value is then imputed by averaging or interpolating the values of these nearest neighbours.
+## 📌 Introduction  
+Chronic Kidney Disease (CKD) is a progressive condition that affects kidney function and increases the risk of cardiovascular disease and end-stage kidney failure. This project aims to predict CKD using various **machine learning models**:  
+- **Logistic Regression**  
+- **Decision Tree**  
+- **Random Forest**  
+- **Linear Support Vector Machine (SVC)**  
 
-2.Iterative Imputation: The Iterative Imputation technique with a Random Forest Regressor as the estimator is a method used to fill missing values in a dataset by iteratively predicting and updating the missing values based on other features in the dataset.
+The study also explores different **data imputation techniques** to handle missing values and improve model performance.  
 
-3.MICE Forest Imputation: The Multiple Imputation by Chained Equations (MICE) algorithm is useful when the data has missing values in multiple variables. It starts by filling in missing values in each variable with some initial values like mean, median, or mode and then regresses it on the other variables. This process is repeated multiple times, generating multiple imputed datasets. The final imputed dataset is the combined result of those datasets.
+## 📊 Dataset  
+The dataset used in this study is the **Chronic Kidney Disease Dataset** from the **UCI Machine Learning Repository** (400 instances, 24 features). It includes key indicators such as blood pressure, glucose levels, and other medical parameters relevant to CKD diagnosis.  
 
-MACHINE LEARNING MODELS
-Logistic Regression
-Decision Tree Classification
-Random Forest Classification
-Linear Support Vector Classification
-RESULTS
-Accuracy scores of each imputed dataset and machine learning models is given below: Description
+🔗 **Source:** [UCI CKD Dataset](https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease)  
 
-Visual representation of accuracy of each imputed dataset and machine learning models is given below: Description
+## 🔄 Imputation Techniques  
+To handle missing values, the following techniques were implemented:  
+1. **KNN Imputation** – Uses nearest neighbors to estimate missing values.  
+2. **Iterative Imputation** – Uses a Random Forest Regressor to iteratively predict missing values.  
+3. **MICE Forest Imputation** – Uses Multiple Imputation by Chained Equations (MICE) to generate multiple imputed datasets and combine them.  
+
+## 🤖 Machine Learning Models  
+The following models were trained and evaluated:  
+- **Logistic Regression**  
+- **Decision Tree Classification**  
+- **Random Forest Classification**  
+- **Linear Support Vector Classification (SVC)**  
+
+## 📈 Results  
+The accuracy of each machine learning model with different imputation techniques is summarized in the table below:  
+
+| **Imputation Technique** | **Logistic Regression** | **Decision Tree** | **Random Forest** | **Support Vector** |
+|-------------------------|------------------|--------------|--------------|---------------|
+| **KNN Imputation**        | 0.98             | 0.97         | 0.99         | 0.98          |
+| **Iterative Imputation**  | 0.94             | 0.92         | 0.96         | 0.94          |
+| **MICE Forest Imputation**| 0.95             | 0.97         | 0.96         | 0.95          |
+
+![Screenshot 2025-02-06 234909](https://github.com/user-attachments/assets/77bc351d-749d-467f-8612-4dcfaaadadd3)
+
+## 🚀 How to Run  
+1️⃣ **Clone the repository**  
+```bash
+git clone https://github.com/yourusername/ckd-prediction.git
+cd ckd-prediction
+```  
+
+2️⃣ **Install dependencies**  
+```bash
+pip install -r requirements.txt
+```  
+
+3️⃣ **Run the model**  
+```bash
+python main.py
+```  
+
+## 📜 License  
+This project is open-source and licensed under the MIT License.  
+
+---
